@@ -10,10 +10,11 @@ pipeline {
                 echo 'wow another-2 time successful build by github push trigger'
             }
         }
-        stage('Clone sources') {
-                git url: 'https://github.com/bruceGwanhoOh/git_docker_test.git'
-        }
-
+        stage('clone') {
+                    steps {
+                        git url: 'https://github.com/bruceGwanhoOh/git_docker_test.git'
+                    }
+                }
     }
 
 }
