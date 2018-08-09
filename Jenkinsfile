@@ -7,7 +7,7 @@ pipeline {
                 echo 'Building..'
                 sh './gradlew clean build'
                 echo 'successful build by github push trigger'
-                echo 'wow another time successful build by github push trigger'
+                echo 'wow another-2 time successful build by github push trigger'
 
             }
         }
