@@ -7,6 +7,7 @@ pipeline {
                 echo 'Building..'
                 sh './gradle clean build'
                 echo 'successful build by bruce'
+                echo 'successful build by bruce'
             }
         }
     }
