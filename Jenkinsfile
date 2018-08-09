@@ -13,7 +13,7 @@ pipeline {
         stage('clone') {
                     steps {
                         git url: 'https://github.com/bruceGwanhoOh/git_docker_test.git'
-                        sh 'cd git_docker_test.git'
+                        sh 'cd git_docker_test'
                         sh './gradlew build docker'
                     }
                 }
