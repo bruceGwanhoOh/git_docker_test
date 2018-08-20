@@ -20,7 +20,7 @@ pipeline {
         stage('Push to docker hub') {
                     steps {
                             withDockerRegistry([ credentialsId: "docker-hub-credentials", url: "" ]) {
-                              sh 'docker push brucegwanhooh/docker-test:latest'
+                              sh 'docker push brucegwanhooh/docker-test'
                             }
 
                     }
