@@ -22,13 +22,11 @@ pipeline {
                     }
                 }
         stage('Push to docker hub') {
-                    steps{
-
-                    docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials') {
-                               echo 'pushing docker image'
-                               ssh 'sudo docker push brucegwanhooh/docker-test'
-                               echo 'push success'
+                    steps {
+                            withDockerRegistry([ credentialsId: "docker-hub-credentials", url: "" ]) {
+                              sh 'sudo docker push brucegwanhooh/docker-test'
                             }
+
                     }
                     }
 }
