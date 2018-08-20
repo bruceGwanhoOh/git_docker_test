@@ -13,7 +13,7 @@ pipeline {
         stage('Create a Docker Image') {
                     steps {
                         echo 'Docker Image building..'
-                        ssh 'sudo ./gradlew build docker'
+                        sh 'sudo ./gradlew build docker'
                         echo 'docker image build success'
                     }
                 }
